@@ -1,13 +1,17 @@
 # RAMCO Hauling Solutions
 
-Static website source for RAMCO Hauling Solutions LLC.
+Git-ready bilingual website source for RAMCO Hauling Solutions LLC.
+
+The English site lives at `/`, and the Spanish version lives at `/es/`.
 
 ## Edit the site
 
-- Update page content and form fields in `index.html`.
+- Update English page content and form fields in `index.html`.
+- Update Spanish page content and form fields in `es/index.html`.
 - Update colors, typography, spacing, and responsive styles in `styles.css`.
-- Update the confirmation page in `thanks.html`.
+- Update the confirmation pages in `thanks.html` and `es/thanks.html`.
 - Replace `assets/ramco-logo.jpg` to change the logo.
+- Replace `assets/ramco-truck.png` to change the hero photo.
 
 The main brand color is the `--red` variable near the top of `styles.css`.
 
@@ -25,7 +29,27 @@ Then open `http://localhost:8000`.
 
 The form uses FormSubmit and sends inquiries to `ramcohauling@gmail.com`.
 The inbox owner must confirm the first activation email. If the website moves
-to a different domain, update the form's `_next` URL in `index.html`.
+to a different domain, update the form's `_next` URL in both `index.html` and
+`es/index.html`.
+
+## Language links
+
+The EN/ES switch uses `/` and `/es/`. Both work automatically on most static
+hosts. If the site is published under a GitHub Pages repository subpath, update
+those links to include the repository name.
+
+## Push to GitHub
+
+From this folder, run:
+
+```bash
+git init
+git add .
+git commit -m "Add RAMCO bilingual website"
+git branch -M main
+git remote add origin git@github.com:ilianac/ramco.git
+git push -u origin main
+```
 
 ## Social links
 
